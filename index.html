@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Technical Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header class="navbar-header">
+            <h1>Python Documentation</h1>
+        </header>
+        <div class="nav-links">
+            <a href="#Introduction" class="nav-link">Introduction</a>
+            <a href="#Python_Basics" class="nav-link">Python Basics</a>
+            <a href="#Python_Data_Types" class="nav-link">Python Data Types</a>
+            <a href="#Python_Operators" class="nav-link">Python Operators</a>
+            <a href="#Python_Input_and_Output" class="nav-link">Python Input and Output</a>
+            <a href="#References" class="nav-link">References</a>
+        </div>
+    </nav>
+    <main id="main-doc">
+        <div class="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <p>Python is a widely used general-purpose, high level programming language. It was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation. It was designed with an emphasis on code readability, and its syntax allows programmers to express their concepts in fewer lines of code.
+                    It is a programming language that lets you work quickly and integrate systems more efficiently. Moreover, it is used for web development, software delevelopment, mathematics, and system scripting.
+                    
+                    <br><br>There are two major Python versions: Python 2 and Python 3. Both are quite different.</p>
+                <h2>What can Python do?</h2>
+                <p>Python can be used on a server to create web applications, to handle big data and perform complex mathematics, and to database systems wherein it can also read and modify files. 
+                    Aside from that, it can be utilized alongside software to create workflows, and for rapid prototyping, or for production-ready software development.</p>
+                <h2>Why Python?</h2>
+                <p>The reason for its increasing popularity is that it works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). Also, emphasis on code readability, shorter codes, and ease of writing
+                    wherein programmers can express logical concepts in fewer lines of code in comparison to languages such as C++ or Java. Furthermore, Python supports multiple programming paradigms, like object-oriented, imperative and functional programming or procedural.
+                    It runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.
+                </p>
+                <p>Here is the classical Hello World program in Python with its brevity against the relative verbosity of other programming languages.</p>
+                <pre><code>
+                    print("Hello, world!")
+                </code></pre>
+                <p>Another code example with output.</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    myNumber = 3
+                    print(myNumber) 
+                    
+                    myNumber2 = 4.5
+                    print(myNumber2) 
+                    
+                    myNumber ="helloworld"
+                    print(myNumber) 
+
+                    <strong>OUTPUT:</strong>
+                    3
+                    4.5
+                    helloworld
+                </code></pre>
+            </section>
+            <section class="main-section" id="Python_Basics">
+                <header>Python Basics</header>
+                <p>As we learned in the previous page, Python syntax can be executed by writing directly in the Command Line, or by creating a python file on the server, using the .py file extension, and running it in the Command Line.</p>
+                <h2>Python Indentation</h2>
+                <p>Indentation refers to the spaces at the beginning of a code line. Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.
+                    Python uses indentation to indicate a block of code. It will give you an error if you skip the indentation. The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one.
+                    Also, you have to use the same number of spaces in the same block of code, otherwise it will give you an error.
+                </p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    if 5 > 2:
+                        print("Five is greater than two!")
+
+                    <strong>OUTPUT:</strong>  
+                    Five is greater than two!
+                </code></pre>
+                <h2>Python Variables</h2>
+                <p>In Python, There no command for declaring a variable. A variable is created the moment you first assign a value to it. Moreover, Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    x = 5
+                    y = "John"
+                    print(x)
+                    print(y)
+
+                    <strong>OUTPUT:</strong> 
+                    5
+                    John 
+                </code></pre>
+                <p>If you want to specify the data type of a variable, this can be done with casting. String variables can be declared either by using single or double quotes. 
+                    In addition, it is important to remember that variable names are case-sensitive, whereas, the hashtag symbol (#) is used for comments.</p>
+                <pre><code>
+                    x = str(3)    # x will be '3'
+                    y = int(3)    # y will be 3
+                    z = float(3)  # z will be 3.0
+                </code></pre>
+            </section>
+            <section class="main-section" id="Python_Data_Types">
+                <header>Python Data Types</header>
+                <p>Data types are the classification or categorization of data items. It represents the kind of value that tells what operations can be performed on a particular data. Since everything is an object in Python programming, data types are actually classes and variables are instances (object) of these classes.
+                    Python has the following data types built-in by default, in these categories:</p>
+                <pre><code>
+                    Text Type:	str
+                    Numeric Types:	int, float, complex
+                    Sequence Types:	list, tuple, range
+                    Mapping Type:	dict
+                    Set Types:	set, frozenset
+                    Boolean Type:	bool
+                    Binary Types:	bytes, bytearray, memoryview
+                    None Type:	NoneType
+                </code></pre>
+                <h2>Numeric Data Type</h2>
+                <p>The numeric data type in Python represents the data that has a numeric value. A numeric value can be an integer, a floating number, or even a complex number. 
+                    These values are defined as Python int, Python float, and Python complex classes in Python.</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    a = 5
+                    print("Type of a: ", type(a))    
+                    b = 5.0
+                    print("\nType of b: ", type(b)) 
+                    c = 2 + 4j
+                    print("\nType of c: ", type(c))
+
+                    <strong>OUTPUT:</strong>
+                    Type of a:  <class 'int'>
+                    Type of b:  <class 'float'>
+                    Type of c:  <class 'complex'>
+                </code></pre>
+                <h2>Sequence Data Type</h2>
+                <p>The sequence Data Type in Python is the ordered collection of similar or different data types. 
+                    Sequences allow storing of multiple values in an organized and efficient fashion. There are several sequence types in Python including String, List, and Tuple.</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    # Creating a String
+                    # with single Quotes
+                    String1 = 'Welcome to the Geeks World'
+                    print("String with the use of Single Quotes: ")
+                    print(String1)
+                    
+                    # Creating a String
+                    # with double Quotes
+                    String1 = "I'm a Geek"
+                    print("\nString with the use of Double Quotes: ")
+                    print(String1)
+                    print(type(String1))
+
+                    <strong>OUTPUT:</strong>
+                    String with the use of Single Quotes: 
+                    Welcome to the Geeks World
+
+                    String with the use of Double Quotes: 
+                    I'm a Geek
+                    <class 'str'>
+                </code></pre>
+                <h2>Boolean Data Type</h2>
+                <p>Data type with one of the two built-in values, True or False. Boolean objects that are equal to True are truthy (true), and those equal to False are falsy (false). 
+                    But non-Boolean objects can be evaluated in a Boolean context as well and determined to be true or false. It is denoted by the class bool. 
+                    <br><strong>Note</strong> – True and False with capital ‘T’ and ‘F’ are valid booleans otherwise python will throw an error. </p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    print(type(True))
+                    print(type(False))
+
+                    <strong>OUTPUT:</strong>
+                    True
+                    False 
+                </code></pre>
+                <h2>Set Data Type</h2>
+                <p>In Python, a Set is an unordered collection of data types that is iterable, mutable and has no duplicate elements. The order of elements in a set is undefined though it may consist of various elements.
+                    Sets can be created by using the built-in set() function with an iterable object or a sequence by placing the sequence inside curly braces, separated by a ‘comma’. The type of elements in a set need not be the same, various mixed-up data type values can also be passed to the set.</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    #Creating a set
+                    set1 = set()
+                    print("Initial blank Set: ")
+                    print(set1)
+
+                    <strong>OUTPUT:</strong>
+                    Initial blank Set: 
+                    set()
+                </code></pre>
+                <h2>Dictionary Data Type</h2>
+                <p>A dictionary in Python is an unordered collection of data values, used to store data values like a map, unlike other Data Types that hold only a single value as an element, a Dictionary holds a key: value pair. Key-value is provided in the dictionary to make it more optimized. Each key-value pair in a Dictionary is separated by a colon : , whereas each key is separated by a ‘comma’.
+                    <br>In Python, a Dictionary can be created by placing a sequence of elements within curly {} braces, separated by ‘comma’. Values in a dictionary can be of any datatype and can be duplicated, whereas keys can’t be repeated and must be immutable. The dictionary can also be created by the built-in function dict(). An empty dictionary can be created by just placing it in curly braces{}. Dictionary keys are case sensitive, the same name but different cases of Key will be treated distinctly. </p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    # Creating an empty Dictionary
+                    Dict = {}
+                    print("Empty Dictionary: ")
+                    print(Dict)
+
+                    <strong>OUTPUT:</strong>
+                    Empty Dictionary: 
+                    {}
+                </code></pre>
+            </section>
+            <section class="main-section" id="Python_Operators">
+                <header>Python Operators</header>
+                <p>In Python programming, Operators in general are used to perform operations on values and variables. These are standard symbols used for the purpose of logical and arithmetic operations. In this article, we will look into different types of Python operators.</p>
+                <ul>
+                    <li>OPERATORS: These are the special symbols. Eg- + , * , /, etc.</li>
+                    <li>OPERAND: It is the value on which the operator is applied.</li>
+                </ul>
+                <h2>Types of Operators in Python</h2>
+                <ol>
+                    <li>Arithmetic Operators</li>
+                    <li>Comparison Operators</li>
+                    <li>Logical Operators</li>
+                    <li>Bitwise Operators</li>
+                    <li>Assignment Operators</li>
+                    <li>Identity Operators and Membership Operators</li>
+                </ol>
+                <p>With that, let's discuss the first three.</p>
+                <h2>Arithmetic Operators</h2>
+                <p>Python Arithmetic operators are used to perform basic mathematical operations like addition, subtraction, multiplication, and division.
+                    In Python 3.x the result of division is a floating-point while in Python 2.x division of 2 integers was an integer. 
+                    To obtain an integer result in Python 3.x floored (// integer) is used.</p>
+                <img src="https://i.ibb.co/BfSjHvh/393188182-329243023017982-6692209923871241737-n.png" alt="Arithmetic Operators">
+                <p>The modulus operator helps us extract the last digit/s of a number. For example:
+                    <br>x % 10 -> yields the last digit
+                    <br>x % 100 -> yield last two digits</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    # Examples of Arithmetic Operator
+                    a = 9
+                    b = 4
+            
+                    add = a + b # Addition of numbers
+                    sub = a - b # Subtraction of numbers            
+                    mul = a * b # Multiplication of number                           
+                    mod = a % b # Modulo of both number         
+                    p = a ** b # Power
+
+                    # print results
+                    print(add)
+                    print(sub)
+                    print(mul)
+                    print(mod)
+                    print(p)
+
+                    <strong>OUTPUT:</strong>
+                    13
+                    5
+                    36
+                    1
+                    6561
+                </code></pre>
+                <h2>Comparison Operators</h2>
+                <p>In Python Comparison of Relational operators compares the values. It either returns True or False according to the condition.
+                    Also, the comparison operators have lower precedence than the arithmetic operators. All the operators within comparison operators have same precedence order.</p>
+                <img src="https://i.ibb.co/1ZCkQ97/370338850-6028460353920658-1642040181087671915-n.png" alt="Comparison Operators">
+                <p>The following code shows how to implement Comparison Operators in Python:</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    # Examples of Relational Operators
+                    a = 13
+                    b = 33          
+                    
+                    print(a > b) # a > b is False         
+                    print(a < b) # a < b is True                    
+                    print(a == b) # a == b is False                        
+                    print(a != b) # a != b is True                              
+                    print(a >= b) # a >= b is False                              
+                    print(a <= b) # a <= b is True
+
+                    <strong>OUTPUT:</strong>
+                    False
+                    True
+                    False
+                    True
+                    False
+                    True
+                </code></pre>
+                <h2>Logical Operators</h2>
+                <p>Python Logical operators perform Logical AND, Logical OR, and Logical NOT operations. It is used to combine conditional statements.
+                    The precedence of Logical Operators in python is as follows:
+                    <br>Logical not
+                    <br>logical and
+                    <br>logical or</p>
+                <img src="https://i.ibb.co/MBJ1dYc/393196479-1485370348905873-5443382080861044746-n.png" alt="Comparison Operators">
+                <p>The following code shows how to implement Logical Operators in Python:</p>  
+                <pre><code>
+                    <strong>CODE:</strong>
+                    # Examples of Logical Operator
+                    a = True
+                    b = False
+                    
+                    print(a and b) # Print a and b is False            
+                    print(a or b) # Print a or b is True            
+                    print(not a) # Print not a is False
+
+                    <strong>OUTPUT:</strong>
+                    False
+                    True
+                    False
+                </code></pre>         
+            </section>
+            <section class="main-section" id="Python_Input_and_Output">
+                <header>Python Input and Output</header>
+                <p>Python provides us with two inbuilt functions to read the input from the keyboard.
+                    <br>input ( prompt )
+                    <br>raw_input ( prompt )
+                    <br><br><strong>input ()</strong>: This function first takes the input from the user and converts it into a string. The type of the returned object always will be <class ‘str’>. It does not evaluate the expression it just returns the complete statement as String. For example, Python provides a built-in function called input which takes the input from the user. When the input function is called it stops the program and waits for the user’s input. 
+                        When the user presses enter, the program resumes and returns what the user typed.</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    val = input("Enter your value: ")
+                    print(val)
+                    <strong>OUTPUT:</strong>
+                    Enter your value: 123
+                    123
+                </code></pre>
+                <h2>How the input() function works</h2>
+                <p>When input() function executes program flow will be stopped until the user has given input.
+                    The text or message displayed on the output screen to ask a user to enter an input value is optional i.e. the prompt, which will be printed on the screen is optional.
+                    Whatever you enter as input, the input function converts it into a string. if you enter an integer value still input() function converts it into a string. You need to explicitly convert it into an integer in your code using typecasting.</p>
+                <p>raw_input(): This function works in older version (like Python 2.x). This function takes exactly what is typed from the keyboard, converts it to string, and then returns it to the variable in which we want to store it.</p>
+                <pre><code>
+                    <strong>CODE:</strong>
+                    g = raw_input("Enter your name : ")
+                    print g
+                    <strong>OUTPUT:</strong>
+                    Enter your name: geeksforgeeks
+                    geeksforgeeks
+                </code></pre>
+                <p>Here, g is a variable that will get the string value, typed by the user during the execution of the program. Typing of data for the raw_input() function is terminated by enter key. We can use raw_input() to enter numeric data also. In that case, we use typecasting. For more details on typecasting refer this.
+                    <br><br><strong>Note</strong>: input() function takes all the input as a string only
+                    <br><br>There are various function that are used to take as desired input few of them are <strong>int(input())</strong> and <strong>float(input())</strong>.</p>
+            </section>
+            <section class="main-section" id="References">
+                <header>References</header>
+                <p>The documentation and content of this page is taken from
+                    <a href="https://www.w3schools.com/python/default.asp" target="_blank">W3Schools Python Tutorial</a> and 
+                    <a href="https://www.geeksforgeeks.org/python-programming-language/?ref=lbp" target="_blank">GeeksforGeeks Python Tutorial</a>.
+                </p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
